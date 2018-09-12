@@ -4,30 +4,29 @@ import org.a2lpo.taskblock.exceptions.AppException;
 import org.a2lpo.taskblock.model.Role;
 import org.a2lpo.taskblock.model.RoleName;
 import org.a2lpo.taskblock.model.User;
-import org.a2lpo.taskblock.payload.ApiResponse;
-import org.a2lpo.taskblock.payload.JwtAuthenticationResponse;
-import org.a2lpo.taskblock.payload.LoginRequest;
-import org.a2lpo.taskblock.payload.SignUpRequest;
+import org.a2lpo.taskblock.payload.*;
 import org.a2lpo.taskblock.repository.RoleRepo;
 import org.a2lpo.taskblock.repository.UserRepo;
+import org.a2lpo.taskblock.security.CurrentUser;
 import org.a2lpo.taskblock.security.JwtTokenProvider;
+import org.a2lpo.taskblock.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.Collections;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -47,6 +46,22 @@ public class AuthController {
 
     @Autowired
     JwtTokenProvider tokenProvider;
+
+    @GetMapping("/user/me")
+    @PreAuthorize("hasRole('USER')")
+    public UserResponse detailsUser(@CurrentUser UserPrincipal currentUser) {
+
+        return new UserResponse(
+                currentUser.getName(),
+                currentUser.getUsername(),
+                currentUser.getEmail(),
+                new ArrayList<>(
+                        currentUser.getAuthorities()
+                        .stream()
+                        .map(GrantedAuthority::getAuthority)
+                        .collect(Collectors.toList())));
+    }
+
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
