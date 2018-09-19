@@ -56,6 +56,16 @@ public class UserPrincipal implements UserDetails {
         );
     }
 
+    public User extractUser(UserPrincipal userPrincipal) {
+        return new User(
+                userPrincipal.getId(),
+                userPrincipal.getName(),
+                userPrincipal.getUsername(),
+                userPrincipal.getEmail(),
+                userPrincipal.getPassword()
+        );
+    }
+
     public Long getId() {
         return id;
     }
