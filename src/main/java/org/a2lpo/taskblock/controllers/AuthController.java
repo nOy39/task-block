@@ -47,7 +47,7 @@ public class AuthController {
     @Autowired
     JwtTokenProvider tokenProvider;
 
-    @GetMapping("/user/me")
+    @GetMapping("/me")
     @PreAuthorize("hasRole('USER')")
     public UserResponse detailsUser(@CurrentUser UserPrincipal currentUser) {
 
