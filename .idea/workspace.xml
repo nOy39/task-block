@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7fb50eb-b1de-47a7-88f4-c1d69281e986" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/ApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/ApiDescriptionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskChildResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskPeriodRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TodayRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/TaskUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88eedc53-792a-479b-be1e-74630a0f8727.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/88eedc53-792a-479b-be1e-74630a0f8727.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88eedc53-792a-479b-be1e-74630a0f8727/storage_v2/_src_/database/taskb.fXuQBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/88eedc53-792a-479b-be1e-74630a0f8727/storage_v2/_src_/database/taskb.fXuQBg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/SignUpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/repository/TaskRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/repository/TaskRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/SignUpRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/SignUpRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/a2lpo/taskblock/payload/UserResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,11 +101,11 @@
         <counts>
           <entry key="class" value="85" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="175" />
+          <entry key="java" value="176" />
           <entry key="properties" value="5" />
           <entry key="roles" value="1" />
           <entry key="sql" value="15" />
-          <entry key="task" value="9" />
+          <entry key="task" value="10" />
           <entry key="user_roles" value="2" />
           <entry key="usr" value="6" />
           <entry key="xml" value="4" />
@@ -139,8 +114,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="85" />
-          <entry key="Database Element" value="18" />
-          <entry key="JAVA" value="175" />
+          <entry key="Database Element" value="19" />
+          <entry key="JAVA" value="176" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="5" />
           <entry key="SQL" value="6" />
@@ -153,7 +128,7 @@
           <entry key="cell_3" value="583" />
           <entry key="dummy" value="7" />
           <entry key="gitignore" value="33" />
-          <entry key="java" value="12257" />
+          <entry key="java" value="12385" />
           <entry key="properties" value="40" />
           <entry key="sql" value="376" />
           <entry key="txt" value="5" />
@@ -162,7 +137,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12256" />
+          <entry key="JAVA" value="12384" />
           <entry key="PLAIN_TEXT" value="45" />
           <entry key="Properties" value="40" />
           <entry key="SQL" value="110" />
@@ -178,12 +153,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
-              <folding>
-                <element signature="method#editTask#0;class#TaskController#0" />
-                <element signature="method#deleteTask#0;class#TaskController#0" />
-              </folding>
+            <state relative-caret-position="156">
+              <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://88eedc53-792a-479b-be1e-74630a0f8727/database/taskb/schema/public/table/task">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -191,8 +171,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+            <state relative-caret-position="125">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,7 +201,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
@@ -299,7 +291,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/88eedc53-792a-479b-be1e-74630a0f8727/console_1.sql" />
         <option value="88eedc53-792a-479b-be1e-74630a0f8727/database/taskb/schema/public/table/task.sql" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/TaskUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/SignUpRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/LoginRequest.java" />
@@ -315,9 +306,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/config/AuditingConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/config/JPASecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/payload/TaskPeriodRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/repository/TaskRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java" />
       </list>
     </option>
@@ -485,7 +477,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/task-block/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java&#10;TaskRepo&#9;null&#9;null&#10;au&#9;FILE&#9;file://D:/Project/task-block/src/main/java/org/a2lpo/taskblock/controllers/AuthController.java&#10;гыук&#9;FILE&#9;file://D:/Project/task-block/src/main/java/org/a2lpo/taskblock/controllers/UserController.java&#10;user&#9;null&#9;null&#10;Controller&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537337817121" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537346357412" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../client-webwork-control/client-web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -560,10 +552,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109966000" />
+    <option name="totallyTimeSpent" value="110920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -583,7 +576,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.5488308" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.69876206" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.69876206" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -746,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/TaskUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
@@ -792,6 +778,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,13 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://88eedc53-792a-479b-be1e-74630a0f8727/database/taskb/schema/public/table/task">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -914,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
@@ -951,14 +926,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/security/UserPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/utils/ToolsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/a2lpo/taskblock/controllers/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="method#editTask#0;class#TaskController#0" />
-            <element signature="method#deleteTask#0;class#TaskController#0" />
-          </folding>
+        <state relative-caret-position="156">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://88eedc53-792a-479b-be1e-74630a0f8727/database/taskb/schema/public/table/task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

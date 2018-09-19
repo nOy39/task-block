@@ -11,6 +11,9 @@ import org.a2lpo.taskblock.security.CurrentUser;
 import org.a2lpo.taskblock.security.UserPrincipal;
 import org.a2lpo.taskblock.utils.TaskUtils;
 import org.a2lpo.taskblock.utils.ToolsUtils;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,11 +48,11 @@ public class TaskController {
      * @return
      */
     @GetMapping
-    public List<TaskResponse> userTask(@CurrentUser UserPrincipal userPrincipal) {
+    public ResponseEntity<List<TaskResponse>> userTask(@CurrentUser UserPrincipal userPrincipal) {
 
-        return taskUtils.createResponseList(taskRepo
-                        .findAll(userPrincipal.extractUser(userPrincipal)),
-                new ArrayList<>());
+        return new ResponseEntity<>(taskUtils.createResponseList(taskRepo
+                        .findAll(toolsUtils.extractUser(userPrincipal)),
+                new ArrayList<>()), new HttpHeaders(), HttpStatus.OK);
     }
 
     //TODO Переделать чтобы выгружал TaskResponse
@@ -59,8 +62,11 @@ public class TaskController {
      * @return
      */
     @PostMapping
-    public Task createTask(@RequestBody TaskRequest taskRequest,
+    public ResponseEntity<Task> createTask(@RequestBody TaskRequest taskRequest,
                            @CurrentUser UserPrincipal currentUser) {
+        if (taskRequest.getName() == null && taskRequest.getExpiredDate() == null) {
+            return new ResponseEntity<>(new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
         Task newTask = new Task(taskRequest.getName(),
                 taskRequest.getDescription(),
                 taskRequest.getColor(),
@@ -73,7 +79,7 @@ public class TaskController {
             newTask.setParentId(taskRepo.findById(taskRequest.getSubTask()).get());
         }
         taskRepo.save(newTask);
-        return newTask;
+        return new ResponseEntity<>(newTask, new HttpHeaders(), HttpStatus.OK);
     }
 
     /**
@@ -86,7 +92,7 @@ public class TaskController {
     public List<TaskResponse> testGetById(@PathVariable("id") String id,
                                           @CurrentUser UserPrincipal userPrincipal) {
         return taskUtils.createResponseList(taskRepo
-                .findAllById(Long.valueOf(id), userPrincipal.extractUser(userPrincipal)),
+                .findAllById(Long.valueOf(id), toolsUtils.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
 
@@ -101,7 +107,7 @@ public class TaskController {
 
         return taskUtils.createResponseList(taskRepo
                         .findAllCurrentDayTask(tomorrow,
-                                userPrincipal.extractUser(userPrincipal)),
+                                toolsUtils.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
 
@@ -117,7 +123,7 @@ public class TaskController {
         return taskUtils.createResponseList(
                 taskRepo.findAllTaskFromStartToEnd(periodRequest.getStartPeriod(),
                         periodRequest.getEndPeriod(),
-                        userPrincipal.extractUser(userPrincipal)),
+                        toolsUtils.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
 
