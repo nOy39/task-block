@@ -5,6 +5,7 @@ import org.a2lpo.taskblock.model.User;
 import org.a2lpo.taskblock.payload.TaskPeriodRequest;
 import org.a2lpo.taskblock.payload.TaskRequest;
 import org.a2lpo.taskblock.payload.TaskResponse;
+import org.a2lpo.taskblock.payload.UserResponse;
 import org.a2lpo.taskblock.repository.TaskRepo;
 import org.a2lpo.taskblock.repository.UserRepo;
 import org.a2lpo.taskblock.security.CurrentUser;
@@ -55,6 +56,17 @@ public class TaskController {
                 new ArrayList<>()), new HttpHeaders(), HttpStatus.OK);
     }
 
+    @GetMapping("home")
+    public List<TaskResponse> activeTaskList(@CurrentUser UserPrincipal userPrincipal) {
+        return taskUtils.createResponseList(taskRepo.findAllByParentNull(toolsUtils.extractUser(userPrincipal)),
+                new ArrayList<>());
+    }
+
+    @GetMapping("my")
+    public List<TaskResponse> myTaskContent(@CurrentUser UserPrincipal currentUser) {
+       return taskUtils.createResponseList(taskRepo.findAllByParentNull(toolsUtils.extractUser(currentUser)),
+               new ArrayList<>());
+    }
     //TODO Переделать чтобы выгружал TaskResponse
     /**
      * @param taskRequest
