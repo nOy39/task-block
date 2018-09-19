@@ -11,7 +11,6 @@ import org.a2lpo.taskblock.security.CurrentUser;
 import org.a2lpo.taskblock.security.UserPrincipal;
 import org.a2lpo.taskblock.utils.TaskUtils;
 import org.a2lpo.taskblock.utils.ToolsUtils;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -52,15 +51,15 @@ public class TaskController {
                 new ArrayList<>());
     }
 
-    //TODO Переделать чтобы выгружал TaskResponse
     /**
      * @param taskRequest
      * @param currentUser
      * @return
      */
     @PostMapping
-    public Task createTask(@RequestBody TaskRequest taskRequest,
-                           @CurrentUser UserPrincipal currentUser) {
+    public List<TaskResponse> createTask(@RequestBody TaskRequest taskRequest,
+                                   @CurrentUser UserPrincipal currentUser) {
+        User user = currentUser.extractUser(currentUser);
         Task newTask = new Task(taskRequest.getName(),
                 taskRequest.getDescription(),
                 taskRequest.getColor(),
@@ -68,17 +67,20 @@ public class TaskController {
                 LocalDateTime.now(),
                 taskRequest.getExpiredDate(),
                 false);
-        newTask.setUser(userRepo.findById(currentUser.getId()).get());
+                newTask.setUser(user);
         if (taskRequest.getSubTask() != null) {
             newTask.setParentId(taskRepo.findById(taskRequest.getSubTask()).get());
         }
         taskRepo.save(newTask);
-        return newTask;
+        return taskUtils.createResponseList(taskRepo
+                        .findAll(user),
+                new ArrayList<>());
     }
 
     /**
      * Выгружает все задачи по полям id и parent_id
-     * @param id переменная поиска, берется из Pathvariable
+     *
+     * @param id            переменная поиска, берется из Pathvariable
      * @param userPrincipal авторизованный пользователь
      * @return возвращает JSON TaskResponse из Payload
      */
@@ -86,12 +88,13 @@ public class TaskController {
     public List<TaskResponse> testGetById(@PathVariable("id") String id,
                                           @CurrentUser UserPrincipal userPrincipal) {
         return taskUtils.createResponseList(taskRepo
-                .findAllById(Long.valueOf(id), userPrincipal.extractUser(userPrincipal)),
+                        .findAllById(Long.valueOf(id), userPrincipal.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
 
     /**
      * Выгрузка горящих задач
+     *
      * @param userPrincipal авторизованный пользователь
      * @return возвращает JSON TaskResponse из Payload
      */
@@ -100,13 +103,14 @@ public class TaskController {
         LocalDateTime tomorrow = LocalDateTime.now().with(LocalTime.MAX);
 
         return taskUtils.createResponseList(taskRepo
-                        .findAllCurrentDayTask(tomorrow,
+                        .findAllBeforeCurrentDay(tomorrow,
                                 userPrincipal.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
 
     /**
      * Выгрузка не решённых задач за указаный период,
+     *
      * @param periodRequest JSON запрос от клиента с началом и концом периода запроса
      * @param userPrincipal авторизованный пользователь
      * @return возвращает JSON TaskResponse из Payload
@@ -115,11 +119,12 @@ public class TaskController {
     public List<TaskResponse> periodTask(@RequestBody TaskPeriodRequest periodRequest,
                                          @CurrentUser UserPrincipal userPrincipal) {
         return taskUtils.createResponseList(
-                taskRepo.findAllTaskFromStartToEnd(periodRequest.getStartPeriod(),
+                taskRepo.findAllInPeriod(periodRequest.getStartPeriod(),
                         periodRequest.getEndPeriod(),
                         userPrincipal.extractUser(userPrincipal)),
                 new ArrayList<>());
     }
+
 
     //TODO Переделать PUT
     @PutMapping("{id}")
